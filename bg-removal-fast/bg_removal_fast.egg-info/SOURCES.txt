@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+bg_removal_fast/__init__.py
+bg_removal_fast/__main__.py
+bg_removal_fast/cli.py
+bg_removal_fast/heuristics.py
+bg_removal_fast/opencv_fast.py
+bg_removal_fast/pipeline.py
+bg_removal_fast/u2netp.py
+bg_removal_fast.egg-info/PKG-INFO
+bg_removal_fast.egg-info/SOURCES.txt
+bg_removal_fast.egg-info/dependency_links.txt
+bg_removal_fast.egg-info/top_level.txt

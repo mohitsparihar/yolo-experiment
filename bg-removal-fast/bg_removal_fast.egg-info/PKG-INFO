@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: bg-removal-fast
+Version: 0.1.0
+Summary: Fast background removal (OpenCV + U2-NetP hybrid)
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Fast Background Removal (Hybrid OpenCV + U2-NetP)
+
+CPU-friendly background removal for product images. The pipeline runs a fast OpenCV pass first and falls back to a small U2-NetP model only when the mask quality looks poor.
+
+## Quickstart
+
+1. Install dependencies:
+
+```bash
+python -m pip install -r bg-removal-fast/requirements.txt
+```
+
+2. Make the module importable (one-time):
+
+```bash
+python -m pip install -e bg-removal-fast
+```
+
+3. Download the U2-NetP model:
+
+```bash
+python bg-removal-fast/scripts/setup_models.py
+```
+
+4. Run the CLI on a folder:
+
+```bash
+python -m bg_removal_fast --input-dir downloaded_images --output-dir output_pngs
+```
+
+## CLI Options
+
+```bash
+python -m bg_removal_fast \
+  --input-dir /path/to/images \
+  --output-dir /path/to/output \
+  --mode hybrid|opencv|u2netp \
+  --max-side 640 \
+  --workers 4 \
+  --recursive
+```
+
+## Python API
+
+```python
+from bg_removal_fast import remove_bg_hybrid, process_folder
+
+# Single image
+result, quality, used_fallback = remove_bg_hybrid(image)
+result.save("out.png")
+
+# Folder
+process_folder("input_dir", "output_dir", mode="hybrid", workers=4)
+```
+
+## Notes
+
+- Default output is transparent PNG.
+- The model file is stored in `bg-removal-fast/models/u2netp.onnx` and is ignored by git.
+- Heuristics check foreground ratio, border leakage, and edge overlap to decide fallback.

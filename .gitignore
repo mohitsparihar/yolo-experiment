@@ -1,0 +1,61 @@
+# OS / Python
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local environments
+venv/
+.venv/
+
+# Secrets / local config
+.env
+.env.local
+eyewear-detector/.env
+eyewear-detector/.env.local
+eyewear-detector/backend/.env
+
+# Root-level generated data / outputs
+downloaded_images/
+output_pngs/
+output_nobg/
+crops/
+eyewear_bg_output/
+out.png
+out_*.png
+
+# Background removal models / outputs
+bg-removal-fast/models/*.onnx
+bg-removal-fast/output/
+
+# Hugging Face / model caches
+hf_cache/
+eyewear-detector/hf_cache/
+
+# Eyewear detector generated outputs
+eyewear-detector/benchmark_results/
+eyewear-detector/crops/
+eyewear-detector/outputs/
+eyewear-detector/runs/
+eyewear-detector/scripts/__pycache__/
+eyewear-detector/models/__pycache__/
+eyewear-detector/training/__pycache__/
+eyewear-detector/utils/__pycache__/
+eyewear-detector/__pycache__/
+
+# Auto-generated datasets
+eyewear-detector/training/datasets/**/images/
+eyewear-detector/training/datasets/**/labels/
+eyewear-detector/training/datasets/**/manifest.json
+eyewear-detector/training/datasets/**/*_finder.yaml
+eyewear-detector/training/datasets/**/*_detector.yaml
+eyewear-detector/training/datasets/**/_staging/
+
+# Trained model artifacts
+eyewear-detector/trained_models/**/*.pt
+eyewear-detector/trained_models/**/active.txt
+
+# Downloaded model weights
+eyewear-detector/yolov8*.pt
+
+# Downloaded images
+downloaded_images/
