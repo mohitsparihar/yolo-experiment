@@ -1,0 +1,16 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlmodel==0.0.22
+python-multipart==0.0.9
+anthropic==0.39.0
+ultralytics>=8.0.0
+fashion-clip==0.2.0
+qdrant-client==1.12.0
+opencv-python-headless==4.10.0.84
+Pillow==10.4.0
+numpy>=1.24.0
+python-dotenv==1.0.1
+rembg
+aiofiles==24.1.0
+sse-starlette==2.1.0
+httpx==0.27.2

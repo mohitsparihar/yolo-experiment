@@ -1,0 +1,11 @@
+torch
+torchvision
+transformers
+Pillow
+opencv-python
+numpy
+ultralytics
+label-studio-sdk
+python-dotenv
+rembg
+playwright

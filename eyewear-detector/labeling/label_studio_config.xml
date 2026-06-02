@@ -1,0 +1,13 @@
+<View>
+  <Image name="image" value="$image" zoom="true" zoomControl="true"/>
+  <RectangleLabels name="label" toName="image" showInline="true">
+    <Label value="eyewear_product" background="#FF6B6B"/>
+    <Label value="frame_rim"       background="#4ECDC4"/>
+    <Label value="lens_left"       background="#45B7D1"/>
+    <Label value="lens_right"      background="#96CEB4"/>
+    <Label value="nose_bridge"     background="#FFEAA7"/>
+    <Label value="temple_left"     background="#DDA0DD"/>
+    <Label value="temple_right"    background="#98D8C8"/>
+    <Label value="brand_logo"      background="#F7DC6F"/>
+  </RectangleLabels>
+</View>
